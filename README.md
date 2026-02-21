@@ -15,13 +15,13 @@ The focus of this repository is to strengthen my understanding of:
 
 ## 📂 Repository Structure
 
-  vlsi-rtl-projects/
-      |--- 4-bit-up-down-counter/
-      | |--- rtl/
-      | |--- tb/
-      | |--- sim/
-      | |--- README.md
-      |--- README.md
+    vlsi-rtl-projects/
+        |--- 4-bit-up-down-counter/
+        | |--- rtl/
+        | |--- tb/
+        | |--- sim/
+        | |--- README.md
+        |--- README.md
 
 ---
 

@@ -1,47 +1,98 @@
-# VLSI RTL Projects
+# 4-Bit Up/Down Counter (Verilog RTL)
 
-This repository documents my RTL design implementations using Verilog HDL.  
-Each project includes synthesizable RTL code, a dedicated testbench, and simulation results verified in ModelSim.
+## 📌 Overview
 
-The focus of this repository is to strengthen my understanding of:
+This project implements a 4-bit up/down counter using synthesizable Verilog RTL.
 
-- Register Transfer Level (RTL) design
-- Finite State Machine (FSM) modeling
-- Sequential and combinational logic
-- Testbench development
-- Waveform-based debugging
-
----
-
-## 📂 Repository Structure
-
-    vlsi-rtl-projects/
-        |--- 4-bit-up-down-counter/
-        | |--- rtl/
-        | |--- tb/
-        | |--- sim/
-        | |--- README.md
-        |--- README.md
-
----
-
-## 🔹 Completed Projects
-
-### 1️⃣ 4-Bit Up/Down Counter
+The counter supports:
 - Asynchronous reset (active high)
 - Enable control
 - Direction control (up/down)
 - Wrap-around behavior
-- Fully synthesizable RTL
-- Separate testbench included
+
+The design was verified using ModelSim with a dedicated testbench.
+
+---
+
+## 🧠 Design Description
+
+The counter is implemented using a sequential `always` block triggered on:
+
+- Positive edge of clock
+- Positive edge of asynchronous reset
+
+On reset assertion:
+q <= 4'b0000;
+
+
+When enabled:
+- If `dir = 1` → counter increments
+- If `dir = 0` → counter decrements
+
+Since the counter is 4-bit wide, it naturally wraps:
+- `1111 + 1 → 0000`
+- `0000 - 1 → 1111`
+
+Non-blocking assignments (`<=`) are used to ensure proper sequential behavior.
+
+---
+
+## 📥 Inputs
+
+| Signal | Description |
+|--------|-------------|
+| clk    | Clock input |
+| arst   | Asynchronous reset (active high) |
+| en     | Enable signal |
+| dir    | Direction control (1 = up, 0 = down) |
+
+---
+
+## 📤 Output
+
+| Signal | Description |
+|--------|-------------|
+| q[3:0] | 4-bit counter output |
+
+---
+
+## 🧪 Testbench
+
+The testbench verifies:
+- Reset initialization
+- Counting up
+- Counting down
+- Enable control behavior
+- Wrap-around functionality
+
+Simulation time unit:
+`timescale 1ns/1ps
+
+---
+
+## 📊 Simulation Result
+
+(Insert waveform screenshot here)
+
+Example waveform demonstrates:
+- Reset to 0000
+- Up-counting
+- Down-counting
+- Proper wrap-around
 
 ---
 
 ## 🛠 Tools Used
+
 - Verilog HDL
 - ModelSim (Intel FPGA Edition)
 
 ---
 
-## 📜 License
-This repository is licensed under the MIT License.
+## 🔎 Key Learning Outcomes
+
+- Understanding of sequential logic in RTL
+- Proper use of non-blocking assignments
+- Reset handling in simulation
+- Debugging unknown (`X`) states
+- Time-scale awareness in simulation

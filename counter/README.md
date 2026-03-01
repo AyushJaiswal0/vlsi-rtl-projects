@@ -72,7 +72,8 @@ Simulation time unit:
 
 ## 📊 Simulation Result
 
-(Insert waveform screenshot here)
+<img width="1513" height="692" alt="waveform" src="https://github.com/user-attachments/assets/a74bff0f-1775-42ca-b047-74fbf069bed7" />
+
 
 Example waveform demonstrates:
 - Reset to 0000

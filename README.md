@@ -5,11 +5,11 @@ Each project includes synthesizable RTL code, a dedicated testbench, and simulat
 
 The focus of this repository is to strengthen my understanding of:
 
-- Register Transfer Level (RTL) design
-- Finite State Machine (FSM) modeling
-- Sequential and combinational logic
-- Testbench development
-- Waveform-based debugging
+- Register Transfer Level (RTL) design  
+- Finite State Machine (FSM) modeling  
+- Sequential and combinational logic  
+- Testbench development  
+- Waveform-based debugging  
 
 ---
 
@@ -17,10 +17,17 @@ The focus of this repository is to strengthen my understanding of:
 
     vlsi-rtl-projects/
         |--- 4-bit-up-down-counter/
-        | |--- rtl/
-        | |--- tb/
-        | |--- sim/
-        | |--- README.md
+        |   |--- rtl/
+        |   |--- tb/
+        |   |--- sim/
+        |   |--- README.md
+        |
+        |--- sequence-detector-101/
+        |   |--- rtl/
+        |   |--- tb/
+        |   |--- sim/
+        |   |--- README.md
+        |
         |--- README.md
 
 ---
@@ -37,8 +44,19 @@ The focus of this repository is to strengthen my understanding of:
 
 ---
 
+### 2️⃣ 101 Sequence Detector (Overlapping)
+- Moore FSM implementation (3-block structure)
+- Registered state transitions using non-blocking assignments
+- Registered output based on `next_state`
+- Asynchronous active-high reset
+- Supports overlapping sequence detection
+- Fully synthesizable RTL
+- Dedicated synchronous testbench
+
+---
+
 ## 🛠 Tools Used
-- Verilog HDL
+- Verilog HDL  
 - ModelSim (Intel FPGA Edition)
 
 ---

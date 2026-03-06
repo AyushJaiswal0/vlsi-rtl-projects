@@ -47,7 +47,8 @@ The output generates two single-cycle pulses corresponding to the two overlappin
 
 ## 📷 Simulation Result
 
-![Waveform](waveform.png)
+<img width="1632" height="750" alt="waveform" src="https://github.com/user-attachments/assets/1eaa53b4-7ad2-437f-9ce4-5323b11c4eeb" />
+
 
 ---
 

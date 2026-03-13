@@ -16,13 +16,19 @@ The focus of this repository is to strengthen my understanding of:
 ## 📂 Repository Structure
 
     vlsi-rtl-projects/
-        |--- 4-bit-up-down-counter/
+        |--- counter/
         |   |--- rtl/
         |   |--- tb/
         |   |--- sim/
         |   |--- README.md
         |
         |--- sequence-detector-101/
+        |   |--- rtl/
+        |   |--- tb/
+        |   |--- sim/
+        |   |--- README.md
+        |
+        |--- traffic-light-controller/
         |   |--- rtl/
         |   |--- tb/
         |   |--- sim/
@@ -52,6 +58,22 @@ The focus of this repository is to strengthen my understanding of:
 - Supports overlapping sequence detection
 - Fully synthesizable RTL
 - Dedicated synchronous testbench
+
+---
+
+### 3️⃣ Traffic Light Controller (Moore FSM)
+- Moore FSM implementation controlling a two-road intersection
+- 4-state FSM design with 2-bit state encoding
+- Registered state transitions
+- Registered traffic light outputs
+- Sequential traffic flow control between two roads
+- Asynchronous active-high reset
+- Fully synthesizable RTL
+- Dedicated simulation testbench
+
+Traffic sequence implemented:
+
+    Road B Green → Road B Yellow → Road A Green → Road A Yellow → repeat
 
 ---
 
